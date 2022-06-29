@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Offline QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>
+    <link href="lib/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+    <script src="lib/u16Websocket.js"></script>
+    <script src="index.js?v=9"></script>
+  </head>
+  <body class="bg-light">
+    <h1 id="page-title">Offline Qatar-OSCAR 100 Wideband Spectrum Monitor</h1>
+    <div id="top-description">
+      <p>
+        This is an offline version of the Batc/Amsat-UK Oscar 100 Wideband Spectrum Monitor. Online version can be found <a href='https://eshail.batc.org.uk/wb/'>here</a>.
+      </p>
+    </div>
+
+    <div id="content" role="main">
+      <div class="row">
+
+        <div id="fft-col" class="col-xl-12">
+          <canvas id="c" width="1" height="1"></canvas>
+          <div id="under-canvas">
+            <span id="bandplan-link"><a href="https://wiki.batc.org.uk/QO-100_WB_Bandplan" target="_blank">DATV Bandplan</a></span>
+            <span id="fullscreen-link-span">
+                <select id="fft-speed-select">
+                    <option value="fft" selected="selected">Slow</option>
+                    <option value="fft_fast">Fast</option>
+                </select>
+                <select id="fft-colour-select">
+                    <option value="green" selected="selected">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <button id="fullscreen-link" onclick="fft_fullscreen();">Open fullscreen</button></span>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <footer class="my-4 pt-1 text-muted text-center text-small">
+      <p class="mb-1">This interface is based of the original BATC Web Receiver project found <a href='https://github.com/BritishAmateurTelevisionClub/eshail-ghy-web'>here</a>  </p>
+    </footer>
+  </body>
+</html>
