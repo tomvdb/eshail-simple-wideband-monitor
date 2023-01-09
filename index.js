@@ -1,4 +1,4 @@
-var ws_url = "ws://" + window.location.hostname + ":7681";
+var ws_url = "wss://eshail.batc.org.uk/wb/fft";
 var ws_name = 'fft';
 
 if(typeof ws_url_override !== 'undefined')
